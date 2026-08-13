@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF to Text - Extract Text from a PDF Free | DocuTools</title>
+  <meta name="description" content="Extract selectable text from a text-based PDF and download it as a .txt file. Processed locally in your browser.">
+  <link rel="canonical" href="https://www.docutools.example/pdf-to-text.html">
+  <meta property="og:title" content="PDF to Text - Extract Text from a PDF Free | DocuTools">
+  <meta property="og:description" content="Extract selectable text from a text-based PDF and download it as a .txt file. Processed locally in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.docutools.example/pdf-to-text.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-active="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="main-content">
+
+    <section class="tool-page-header">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> &rsaquo; <a href="tools.html">All Tools</a> &rsaquo; PDF to Text</p>
+        <h1>PDF to Text</h1>
+        <p class="tool-desc">Extract selectable text from a text-based PDF and download it as a plain text file.</p>
+        <div class="tool-meta"><span class="badge badge-local">Local processing</span></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tool-app">
+
+          <div class="panel">
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose a PDF file">
+              <div class="dropzone-icon" aria-hidden="true">&#128196;</div>
+              <p><strong>Drag and drop a PDF here</strong> or click to choose a file</p>
+              <p class="dz-hint">One PDF file, up to 80 MB.</p>
+              <input type="file" id="file-input" accept="application/pdf,.pdf">
+            </div>
+            <ul class="file-list" id="file-list" aria-live="polite"></ul>
+            <p id="page-count-line" class="field-help" style="display:none;"></p>
+            <div class="control-row">
+              <button type="button" class="btn btn-primary" id="convert-btn" disabled>Extract Text</button>
+              <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+            <div class="status-box" id="status-box" role="status"></div>
+          </div>
+          <div class="panel result-panel" id="result-panel" style="display:none;">
+            <h2>Extracted text</h2>
+            <div class="field">
+              <label for="output-text" class="visually-hidden">Extracted text</label>
+              <textarea id="output-text" readonly style="min-height:300px;"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary btn-block" id="download-btn">Download as .txt</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="border-top:1px solid var(--color-border);">
+      <div class="container prose">
+        <h2>How to use this tool</h2>
+        <ol>
+<li>Upload a text-based PDF file.</li>
+<li>Click "Extract Text".</li>
+<li>Review the text in the box, then download it as a .txt file.</li>
+        </ol>
+        <h2>Limitations</h2><p>This tool reads the text layer that is already embedded in the PDF. Scanned documents and photographed pages usually have no embedded text layer at all, so this tool will find nothing to extract from them; use the OCR tool for that kind of file instead.</p>
+        <h2>Privacy</h2>
+        <p>This tool processes your file locally in your browser. Your file is not uploaded to a server as part of this operation.</p>
+        <h2>Frequently asked questions</h2>
+        <details class="faq-item">
+          <summary>Why is the result empty?</summary>
+          <p>The PDF likely contains only scanned images with no embedded text layer. Try the OCR tool, which recognizes text from an image.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does this preserve formatting like tables and columns?</summary>
+          <p>No, the output is plain text in reading order as reported by the PDF, without layout formatting.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my PDF uploaded to a server?</summary>
+          <p>No, extraction happens locally in your browser using PDF.js.</p>
+        </details>
+        <h2>Related tools</h2>
+        <div class="related-tools">
+          <a href="ocr.html">OCR - Image to Text</a>
+          <a href="text-to-pdf.html">Text to PDF</a>
+          <a href="pdf-to-jpg.html">PDF to JPG</a>
+          <a href="split-pdf.html">Split PDF</a>
+          <a href="merge-pdf.html">Merge PDF</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/lib-loader.js" defer></script>
+  <script src="js/pdf-helpers.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/pdf-to-text.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Compressor - Reduce Image File Size Free | DocuTools</title>
+  <meta name="description" content="Compress a JPG, PNG or WebP image with a real, measured before-and-after size comparison. Processed locally in your browser.">
+  <link rel="canonical" href="https://www.docutools.example/image-compressor.html">
+  <meta property="og:title" content="Image Compressor - Reduce Image File Size Free | DocuTools">
+  <meta property="og:description" content="Compress a JPG, PNG or WebP image with a real, measured before-and-after size comparison. Processed locally in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.docutools.example/image-compressor.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-active="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="main-content">
+
+    <section class="tool-page-header">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> &rsaquo; <a href="tools.html">All Tools</a> &rsaquo; Image Compressor</p>
+        <h1>Image Compressor</h1>
+        <p class="tool-desc">Shrink an image file size by adjusting quality, with a real before-and-after size comparison.</p>
+        <div class="tool-meta"><span class="badge badge-local">Local processing</span></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tool-app">
+
+          <div class="panel">
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose an image file">
+              <div class="dropzone-icon" aria-hidden="true">&#128247;</div>
+              <p><strong>Drag and drop an image here</strong> or click to choose a file</p>
+              <p class="dz-hint">Supports JPG, PNG and WebP, up to 25 MB.</p>
+              <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp">
+            </div>
+            <ul class="file-list" id="file-list" aria-live="polite"></ul>
+            <div class="field">
+              <label for="format-select">Output format</label>
+              <select id="format-select">
+                <option value="image/jpeg" selected>JPEG (best general-purpose compression)</option>
+                <option value="image/webp">WebP (often smaller, if supported by your browser)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="quality-range">Quality: <span id="quality-value">70%</span></label>
+              <input type="range" id="quality-range" min="10" max="95" value="70">
+              <p class="field-help">Lower quality means a smaller file but more visible compression artifacts.</p>
+            </div>
+            <div class="control-row">
+              <button type="button" class="btn btn-primary" id="convert-btn" disabled>Compress Image</button>
+              <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+            <div class="status-box" id="status-box" role="status"></div>
+          </div>
+          <div class="panel result-panel" id="result-panel" style="display:none;">
+            <h2>Compressed image</h2>
+            <table class="compare-table" id="compare-table"></table>
+            <div class="result-preview"><img id="result-img" alt="Compressed preview"></div>
+            <button type="button" class="btn btn-primary btn-block" id="download-btn" style="margin-top:12px;">Download image</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="border-top:1px solid var(--color-border);">
+      <div class="container prose">
+        <h2>How to use this tool</h2>
+        <ol>
+<li>Upload an image.</li>
+<li>Choose JPEG or WebP as the output format, and pick a quality level.</li>
+<li>Click "Compress Image".</li>
+<li>Check the measured size comparison, then download the result.</li>
+        </ol>
+        <h2>Limitations</h2><p>Compression always re-encodes the image as JPEG or WebP, both of which are lossy formats; transparency in PNG images is flattened onto a white background when JPEG is chosen. Some images, especially ones that are already small or simple graphics, may not shrink further.</p>
+        <h2>Privacy</h2>
+        <p>This tool processes your file locally in your browser. Your file is not uploaded to a server as part of this operation.</p>
+        <h2>Frequently asked questions</h2>
+        <details class="faq-item">
+          <summary>Why choose WebP over JPEG?</summary>
+          <p>WebP often produces a smaller file at similar visual quality, but it is disabled here if your specific browser cannot encode it.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens to transparent PNGs?</summary>
+          <p>If you compress to JPEG, transparent areas are filled with white, since JPEG has no transparency support. Choose WebP to keep transparency.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my image uploaded anywhere?</summary>
+          <p>No, compression happens locally in your browser using the Canvas API.</p>
+        </details>
+        <h2>Related tools</h2>
+        <div class="related-tools">
+          <a href="image-resizer.html">Image Resizer</a>
+          <a href="jpg-to-png.html">JPG to PNG</a>
+          <a href="png-to-jpg.html">PNG to JPG</a>
+          <a href="compress-pdf.html">Compress PDF</a>
+          <a href="jpg-to-pdf.html">JPG to PDF</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/image-helpers.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/image-compressor.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to PDF - Convert Plain Text to a PDF Free | DocuTools</title>
+  <meta name="description" content="Turn plain text into a nicely formatted, multi-page PDF for free, right in your browser.">
+  <link rel="canonical" href="https://www.docutools.example/text-to-pdf.html">
+  <meta property="og:title" content="Text to PDF - Convert Plain Text to a PDF Free | DocuTools">
+  <meta property="og:description" content="Turn plain text into a nicely formatted, multi-page PDF for free, right in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.docutools.example/text-to-pdf.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-active="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="main-content">
+
+    <section class="tool-page-header">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> &rsaquo; <a href="tools.html">All Tools</a> &rsaquo; Text to PDF</p>
+        <h1>Text to PDF</h1>
+        <p class="tool-desc">Turn plain text into a formatted, paginated PDF with sensible margins.</p>
+        <div class="tool-meta"><span class="badge badge-local">Local processing</span></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tool-app">
+
+          <div class="panel">
+            <div class="field">
+              <label for="text-input">Your text</label>
+              <textarea id="text-input" placeholder="Type or paste your text here..." style="min-height:280px;"></textarea>
+            </div>
+            <div class="control-row">
+              <div class="field" style="flex:1;min-width:160px;">
+                <label for="page-size-select">Page size</label>
+                <select id="page-size-select">
+                  <option value="a4" selected>A4</option>
+                  <option value="letter">US Letter</option>
+                </select>
+              </div>
+              <div class="field" style="flex:1;min-width:160px;">
+                <label for="font-size-select">Font size</label>
+                <select id="font-size-select">
+                  <option value="10">Small (10pt)</option>
+                  <option value="12" selected>Normal (12pt)</option>
+                  <option value="14">Large (14pt)</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-row">
+              <button type="button" class="btn btn-primary" id="convert-btn">Convert to PDF</button>
+              <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+            <div class="status-box" id="status-box" role="status"></div>
+          </div>
+          <div class="panel result-panel" id="result-panel" style="display:none;">
+            <h2>Your PDF is ready</h2>
+            <p id="result-summary"></p>
+            <button type="button" class="btn btn-primary btn-block" id="download-btn">Download PDF</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="border-top:1px solid var(--color-border);">
+      <div class="container prose">
+        <h2>How to use this tool</h2>
+        <ol>
+<li>Type or paste your text into the box.</li>
+<li>Choose a page size and font size.</li>
+<li>Click "Convert to PDF". Long text automatically wraps and flows across multiple pages.</li>
+<li>Download the finished PDF.</li>
+        </ol>
+        <h2>Limitations</h2><p>This tool supports plain text only: no bold, italics, images, or custom fonts. For richly formatted documents, consider a full word processor and export to PDF from there.</p>
+        <h2>Privacy</h2>
+        <p>This tool processes your file locally in your browser. Your file is not uploaded to a server as part of this operation.</p>
+        <h2>Frequently asked questions</h2>
+        <details class="faq-item">
+          <summary>Does it support very long text?</summary>
+          <p>Yes. Text automatically flows onto as many pages as needed.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I control the margins?</summary>
+          <p>Margins are fixed to a comfortable, readable default for both supported page sizes.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my text uploaded anywhere?</summary>
+          <p>No, the PDF is generated locally in your browser using the pdf-lib library.</p>
+        </details>
+        <h2>Related tools</h2>
+        <div class="related-tools">
+          <a href="pdf-to-text.html">PDF to Text</a>
+          <a href="merge-pdf.html">Merge PDF</a>
+          <a href="jpg-to-pdf.html">JPG to PDF</a>
+          <a href="images-to-pdf.html">Images to PDF</a>
+          <a href="compress-pdf.html">Compress PDF</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/lib-loader.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/text-to-pdf.js" defer></script>
+</body>
+</html>

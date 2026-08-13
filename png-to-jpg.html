@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PNG to JPG - Convert PNG Images to JPG Free | DocuTools</title>
+  <meta name="description" content="Convert a PNG image to JPG for free with adjustable quality, right in your browser.">
+  <link rel="canonical" href="https://www.docutools.example/png-to-jpg.html">
+  <meta property="og:title" content="PNG to JPG - Convert PNG Images to JPG Free | DocuTools">
+  <meta property="og:description" content="Convert a PNG image to JPG for free with adjustable quality, right in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.docutools.example/png-to-jpg.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-active="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="main-content">
+
+    <section class="tool-page-header">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> &rsaquo; <a href="tools.html">All Tools</a> &rsaquo; PNG to JPG</p>
+        <h1>PNG to JPG</h1>
+        <p class="tool-desc">Convert a PNG image to the JPG format, with an adjustable quality level.</p>
+        <div class="tool-meta"><span class="badge badge-local">Local processing</span></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tool-app">
+
+          <div class="panel">
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose an image file">
+              <div class="dropzone-icon" aria-hidden="true">&#128247;</div>
+              <p><strong>Drag and drop an image here</strong> or click to choose a file</p>
+              <p class="dz-hint">One PNG file, up to 25 MB.</p>
+              <input type="file" id="file-input" accept="image/png,.png">
+            </div>
+            <ul class="file-list" id="file-list" aria-live="polite"></ul>
+            
+            <div class="field">
+              <label for="quality-range">JPG quality: <span id="quality-value">85%</span></label>
+              <input type="range" id="quality-range" min="10" max="95" value="85">
+            </div>
+            <div class="control-row">
+              <button type="button" class="btn btn-primary" id="convert-btn" disabled>Convert to JPG</button>
+              <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+            <div class="status-box" id="status-box" role="status"></div>
+          </div>
+          <div class="panel result-panel" id="result-panel" style="display:none;">
+            <h2>Converted image</h2>
+            <p id="result-summary"></p>
+            <div class="result-preview"><img id="result-img" alt="Converted preview"></div>
+            <button type="button" class="btn btn-primary btn-block" id="download-btn" style="margin-top:12px;">Download image</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="border-top:1px solid var(--color-border);">
+      <div class="container prose">
+        <h2>How to use this tool</h2>
+        <ol>
+<li>Upload a PNG image.</li>
+<li>Choose a JPG quality level.</li>
+<li>Click "Convert to JPG".</li>
+<li>Preview and download the JPG file.</li>
+        </ol>
+        <h2>Limitations</h2><p>JPG does not support transparency. Any transparent areas in your PNG are filled with a white background during conversion.</p>
+        <h2>Privacy</h2>
+        <p>This tool processes your file locally in your browser. Your file is not uploaded to a server as part of this operation.</p>
+        <h2>Frequently asked questions</h2>
+        <details class="faq-item">
+          <summary>What happens to transparent parts of my PNG?</summary>
+          <p>They are filled with solid white, since the JPG format has no transparency channel.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my image uploaded anywhere?</summary>
+          <p>No, conversion happens locally in your browser using the Canvas API.</p>
+        </details>
+        <h2>Related tools</h2>
+        <div class="related-tools">
+          <a href="jpg-to-png.html">JPG to PNG</a>
+          <a href="image-compressor.html">Image Compressor</a>
+          <a href="image-resizer.html">Image Resizer</a>
+          <a href="jpg-to-pdf.html">JPG to PDF</a>
+          <a href="images-to-pdf.html">Images to PDF</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/image-helpers.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/png-to-jpg.js" defer></script>
+</body>
+</html>

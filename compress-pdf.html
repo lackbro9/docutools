@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compress PDF - Genuine, Measured PDF Optimization | DocuTools</title>
+  <meta name="description" content="Reduce PDF file size in your browser with two honest, measured compression modes. No fake percentages.">
+  <link rel="canonical" href="https://www.docutools.example/compress-pdf.html">
+  <meta property="og:title" content="Compress PDF - Genuine, Measured PDF Optimization | DocuTools">
+  <meta property="og:description" content="Reduce PDF file size in your browser with two honest, measured compression modes. No fake percentages.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.docutools.example/compress-pdf.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-active="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="main-content">
+
+    <section class="tool-page-header">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> &rsaquo; <a href="tools.html">All Tools</a> &rsaquo; Compress PDF</p>
+        <h1>Compress PDF</h1>
+        <p class="tool-desc">Reduce the file size of a PDF using genuine, measured browser-based optimization.</p>
+        <div class="tool-meta"><span class="badge badge-local">Local processing</span></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tool-app">
+
+          <div class="panel">
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose a PDF file">
+              <div class="dropzone-icon" aria-hidden="true">&#128196;</div>
+              <p><strong>Drag and drop a PDF here</strong> or click to choose a file</p>
+              <p class="dz-hint">One PDF file, up to 80 MB.</p>
+              <input type="file" id="file-input" accept="application/pdf,.pdf">
+            </div>
+            <ul class="file-list" id="file-list" aria-live="polite"></ul>
+            <p id="page-count-line" class="field-help" style="display:none;"></p>
+            
+            <fieldset class="field" style="border:none;padding:0;">
+              <legend style="font-weight:600;font-size:.88rem;margin-bottom:6px;">Compression mode</legend>
+              <label class="checkbox-row"><input type="radio" name="compress-mode" value="optimize" checked> Optimize (safe, keeps text selectable, modest savings)</label><br>
+              <label class="checkbox-row" style="margin-top:6px;"><input type="radio" name="compress-mode" value="rasterize"> Strong compression (converts pages to images, larger savings possible, text becomes non-selectable)</label>
+            </fieldset>
+            <div class="field" id="raster-options" style="display:none;">
+              <label for="quality-select">Image quality</label>
+              <select id="quality-select">
+                <option value="0.9">High quality (larger file)</option>
+                <option value="0.7" selected>Balanced</option>
+                <option value="0.45">Smaller file (lower quality)</option>
+              </select>
+            </div>
+            <div class="control-row">
+              <button type="button" class="btn btn-primary" id="convert-btn" disabled>Compress PDF</button>
+              <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+            <div class="status-box" id="status-box" role="status"></div>
+            <div class="progress-bar-track" id="progress-track" style="display:none;">
+              <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+          </div>
+          <div class="panel result-panel" id="result-panel" style="display:none;">
+            <h2>Your PDF is ready</h2>
+            <table class="compare-table" id="compare-table"></table>
+            <p id="result-summary"></p>
+            <button type="button" class="btn btn-primary btn-block" id="download-btn">Download PDF</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="border-top:1px solid var(--color-border);">
+      <div class="container prose">
+        <h2>How to use this tool</h2>
+        <ol>
+<li>Upload a PDF file.</li>
+<li>Choose "Optimize" for a safe pass that keeps text selectable, or "Strong compression" for larger savings on image-heavy or scanned PDFs.</li>
+<li>Click "Compress PDF".</li>
+<li>Check the before/after size comparison, then download the result.</li>
+        </ol>
+        <h2>Limitations</h2><p>Arbitrary, reliable PDF compression is genuinely hard to do inside a browser. "Optimize" mode re-saves the PDF structure and typically yields modest savings. "Strong compression" mode renders each page to a JPEG image, which can shrink image-heavy or scanned documents significantly, but text is no longer selectable or searchable afterward, and text-heavy PDFs can sometimes get larger, not smaller. DocuTools always measures and reports the real result rather than assuming a reduction. If you need guaranteed, high-ratio compression that preserves text, a dedicated desktop tool or a future server-side option may work better.</p>
+        <h2>Privacy</h2>
+        <p>This tool processes your file locally in your browser. Your file is not uploaded to a server as part of this operation.</p>
+        <h2>Frequently asked questions</h2>
+        <details class="faq-item">
+          <summary>Why did my file get bigger instead of smaller?</summary>
+          <p>This can happen in either mode: "optimize" has little to gain on an already-efficient PDF, and "strong compression" can produce a larger file for text-heavy documents because rendered page images are sometimes larger than compact vector text. DocuTools reports the real measured result either way.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Will strong compression make my text unselectable?</summary>
+          <p>Yes. That mode turns every page into a JPEG image, so any text on the page is no longer selectable, searchable, or accessible to screen readers.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my PDF uploaded to a server?</summary>
+          <p>No, both modes run locally in your browser using pdf-lib and PDF.js.</p>
+        </details>
+        <h2>Related tools</h2>
+        <div class="related-tools">
+          <a href="split-pdf.html">Split PDF</a>
+          <a href="merge-pdf.html">Merge PDF</a>
+          <a href="pdf-to-jpg.html">PDF to JPG</a>
+          <a href="image-compressor.html">Image Compressor</a>
+          <a href="pdf-page-extractor.html">PDF Page Extractor</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/lib-loader.js" defer></script>
+  <script src="js/pdf-helpers.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/compress-pdf.js" defer></script>
+</body>
+</html>

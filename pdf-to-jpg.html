@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF to JPG - Convert PDF Pages to Images Free | DocuTools</title>
+  <meta name="description" content="Convert PDF pages into downloadable JPG images for free. Processed locally in your browser using PDF.js.">
+  <link rel="canonical" href="https://www.docutools.example/pdf-to-jpg.html">
+  <meta property="og:title" content="PDF to JPG - Convert PDF Pages to Images Free | DocuTools">
+  <meta property="og:description" content="Convert PDF pages into downloadable JPG images for free. Processed locally in your browser using PDF.js.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.docutools.example/pdf-to-jpg.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-active="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="main-content">
+
+    <section class="tool-page-header">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> &rsaquo; <a href="tools.html">All Tools</a> &rsaquo; PDF to JPG</p>
+        <h1>PDF to JPG</h1>
+        <p class="tool-desc">Convert PDF pages into JPG images, right in your browser.</p>
+        <div class="tool-meta"><span class="badge badge-local">Local processing</span></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tool-app">
+
+          <div class="panel">
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose a PDF file">
+              <div class="dropzone-icon" aria-hidden="true">&#128196;</div>
+              <p><strong>Drag and drop a PDF here</strong> or click to choose a file</p>
+              <p class="dz-hint">One PDF file, up to 80 MB.</p>
+              <input type="file" id="file-input" accept="application/pdf,.pdf">
+            </div>
+            <ul class="file-list" id="file-list" aria-live="polite"></ul>
+            <p id="page-count-line" class="field-help" style="display:none;"></p>
+            
+            <div class="field">
+              <label for="range-input">Pages to convert (optional)</label>
+              <input type="text" id="range-input" placeholder="Leave blank for all pages, or e.g. 1-3,5">
+            </div>
+            <div class="field">
+              <label for="quality-select">JPG quality</label>
+              <select id="quality-select">
+                <option value="0.92" selected>High quality</option>
+                <option value="0.75">Balanced</option>
+                <option value="0.5">Smaller file</option>
+              </select>
+            </div>
+            <div class="control-row">
+              <button type="button" class="btn btn-primary" id="convert-btn" disabled>Convert to JPG</button>
+              <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+            <div class="status-box" id="status-box" role="status"></div>
+            <div class="progress-bar-track" id="progress-track" style="display:none;">
+              <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+          </div>
+          <div class="panel result-panel" id="result-panel" style="display:none;">
+            <h2>Your PDF is ready</h2>
+            <p id="result-summary"></p>
+            <button type="button" class="btn btn-primary btn-block" id="download-btn">Download PDF</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="border-top:1px solid var(--color-border);">
+      <div class="container prose">
+        <h2>How to use this tool</h2>
+        <ol>
+<li>Upload a PDF file.</li>
+<li>Optionally enter which pages to convert; leave blank to convert every page.</li>
+<li>Choose a JPG quality level.</li>
+<li>Click "Convert to JPG". A single page downloads as one JPG; multiple pages download together in a ZIP file.</li>
+        </ol>
+        <h2>Limitations</h2><p>Rendering happens at a fixed resolution suitable for screen and general printing use. Very large or very long PDFs can take a while to render because every page is drawn to a canvas in your browser before being saved as an image.</p>
+        <h2>Privacy</h2>
+        <p>This tool processes your file locally in your browser. Your file is not uploaded to a server as part of this operation.</p>
+        <h2>Frequently asked questions</h2>
+        <details class="faq-item">
+          <summary>What happens if I convert multiple pages?</summary>
+          <p>DocuTools packages each page as a separate JPG file inside one downloadable ZIP archive, generated locally using the JSZip library.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I convert a scanned PDF this way?</summary>
+          <p>Yes, PDF to JPG renders whatever is visually on the page, whether it is text, a scan, or a mix of both.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my PDF uploaded to a server?</summary>
+          <p>No, rendering happens locally in your browser using PDF.js.</p>
+        </details>
+        <h2>Related tools</h2>
+        <div class="related-tools">
+          <a href="jpg-to-pdf.html">JPG to PDF</a>
+          <a href="images-to-pdf.html">Images to PDF</a>
+          <a href="merge-pdf.html">Merge PDF</a>
+          <a href="split-pdf.html">Split PDF</a>
+          <a href="ocr.html">OCR - Image to Text</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/lib-loader.js" defer></script>
+  <script src="js/pdf-helpers.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/pdf-to-jpg.js" defer></script>
+</body>
+</html>

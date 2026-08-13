@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Resizer - Resize JPG, PNG or WebP Free | DocuTools</title>
+  <meta name="description" content="Resize an image to an exact width and height for free, right in your browser, with aspect ratio locking.">
+  <link rel="canonical" href="https://www.docutools.example/image-resizer.html">
+  <meta property="og:title" content="Image Resizer - Resize JPG, PNG or WebP Free | DocuTools">
+  <meta property="og:description" content="Resize an image to an exact width and height for free, right in your browser, with aspect ratio locking.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.docutools.example/image-resizer.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-active="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="main-content">
+
+    <section class="tool-page-header">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> &rsaquo; <a href="tools.html">All Tools</a> &rsaquo; Image Resizer</p>
+        <h1>Image Resizer</h1>
+        <p class="tool-desc">Resize a JPG, PNG or WebP image to an exact width and height, right in your browser.</p>
+        <div class="tool-meta"><span class="badge badge-local">Local processing</span></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tool-app">
+
+          <div class="panel">
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose an image file">
+              <div class="dropzone-icon" aria-hidden="true">&#128247;</div>
+              <p><strong>Drag and drop an image here</strong> or click to choose a file</p>
+              <p class="dz-hint">Supports JPG, PNG and WebP, up to 25 MB.</p>
+              <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp">
+            </div>
+            <ul class="file-list" id="file-list" aria-live="polite"></ul>
+            <p id="dims-line" class="field-help" style="display:none;"></p>
+            <div class="control-row">
+              <div class="field" style="flex:1;min-width:120px;">
+                <label for="width-input">Width (px)</label>
+                <input type="number" id="width-input" min="1" max="8000">
+              </div>
+              <div class="field" style="flex:1;min-width:120px;">
+                <label for="height-input">Height (px)</label>
+                <input type="number" id="height-input" min="1" max="8000">
+              </div>
+            </div>
+            <label class="checkbox-row"><input type="checkbox" id="lock-aspect" checked> Lock aspect ratio</label>
+            <div class="control-row">
+              <button type="button" class="btn btn-primary" id="convert-btn" disabled>Resize Image</button>
+              <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+            <div class="status-box" id="status-box" role="status"></div>
+          </div>
+          <div class="panel result-panel" id="result-panel" style="display:none;">
+            <h2>Resized image</h2>
+            <p id="result-summary"></p>
+            <div class="result-preview"><img id="result-img" alt="Resized preview"></div>
+            <button type="button" class="btn btn-primary btn-block" id="download-btn" style="margin-top:12px;">Download image</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="border-top:1px solid var(--color-border);">
+      <div class="container prose">
+        <h2>How to use this tool</h2>
+        <ol>
+<li>Upload an image.</li>
+<li>Enter the width and/or height you want. Aspect ratio is locked by default so the image is not stretched.</li>
+<li>Click "Resize Image".</li>
+<li>Preview the result and download it.</li>
+        </ol>
+        <h2>Limitations</h2><p>Enlarging an image beyond its original size will not add real detail; it will look softer or blurrier. Dimensions are limited to 8000px per side to keep processing reliable in the browser.</p>
+        <h2>Privacy</h2>
+        <p>This tool processes your file locally in your browser. Your file is not uploaded to a server as part of this operation.</p>
+        <h2>Frequently asked questions</h2>
+        <details class="faq-item">
+          <summary>Will resizing change the file format?</summary>
+          <p>No, the output keeps the same format as your uploaded image (JPG, PNG or WebP).</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I unlock the aspect ratio and stretch the image?</summary>
+          <p>Yes, untick "Lock aspect ratio" to set width and height independently.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my image uploaded anywhere?</summary>
+          <p>No, resizing happens locally in your browser using the Canvas API.</p>
+        </details>
+        <h2>Related tools</h2>
+        <div class="related-tools">
+          <a href="image-compressor.html">Image Compressor</a>
+          <a href="jpg-to-png.html">JPG to PNG</a>
+          <a href="png-to-jpg.html">PNG to JPG</a>
+          <a href="jpg-to-pdf.html">JPG to PDF</a>
+          <a href="images-to-pdf.html">Images to PDF</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/image-helpers.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/image-resizer.js" defer></script>
+</body>
+</html>

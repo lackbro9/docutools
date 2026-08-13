@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JPG to PNG - Convert JPG Images to PNG Free | DocuTools</title>
+  <meta name="description" content="Convert a JPG or JPEG image to PNG for free, right in your browser.">
+  <link rel="canonical" href="https://www.docutools.example/jpg-to-png.html">
+  <meta property="og:title" content="JPG to PNG - Convert JPG Images to PNG Free | DocuTools">
+  <meta property="og:description" content="Convert a JPG or JPEG image to PNG for free, right in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.docutools.example/jpg-to-png.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-active="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="main-content">
+
+    <section class="tool-page-header">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> &rsaquo; <a href="tools.html">All Tools</a> &rsaquo; JPG to PNG</p>
+        <h1>JPG to PNG</h1>
+        <p class="tool-desc">Convert a JPG or JPEG photo to the lossless PNG format.</p>
+        <div class="tool-meta"><span class="badge badge-local">Local processing</span></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tool-app">
+
+          <div class="panel">
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose an image file">
+              <div class="dropzone-icon" aria-hidden="true">&#128247;</div>
+              <p><strong>Drag and drop an image here</strong> or click to choose a file</p>
+              <p class="dz-hint">One JPG or JPEG file, up to 25 MB.</p>
+              <input type="file" id="file-input" accept="image/jpeg,.jpg,.jpeg">
+            </div>
+            <ul class="file-list" id="file-list" aria-live="polite"></ul>
+            
+            <div class="control-row">
+              <button type="button" class="btn btn-primary" id="convert-btn" disabled>Convert to PNG</button>
+              <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+            <div class="status-box" id="status-box" role="status"></div>
+          </div>
+          <div class="panel result-panel" id="result-panel" style="display:none;">
+            <h2>Converted image</h2>
+            <p id="result-summary"></p>
+            <div class="result-preview"><img id="result-img" alt="Converted preview"></div>
+            <button type="button" class="btn btn-primary btn-block" id="download-btn" style="margin-top:12px;">Download image</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="border-top:1px solid var(--color-border);">
+      <div class="container prose">
+        <h2>How to use this tool</h2>
+        <ol>
+<li>Upload a JPG or JPEG image.</li>
+<li>Click "Convert to PNG".</li>
+<li>Preview and download the PNG file.</li>
+        </ol>
+        <h2>Limitations</h2><p>PNG is a lossless format, so converting a JPG to PNG usually produces a larger file; it does not add detail that was not already in the original JPG.</p>
+        <h2>Privacy</h2>
+        <p>This tool processes your file locally in your browser. Your file is not uploaded to a server as part of this operation.</p>
+        <h2>Frequently asked questions</h2>
+        <details class="faq-item">
+          <summary>Will converting to PNG improve image quality?</summary>
+          <p>No. It preserves whatever quality the original JPG already had; PNG cannot recover detail lost during the original JPG compression.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my image uploaded anywhere?</summary>
+          <p>No, conversion happens locally in your browser using the Canvas API.</p>
+        </details>
+        <h2>Related tools</h2>
+        <div class="related-tools">
+          <a href="png-to-jpg.html">PNG to JPG</a>
+          <a href="image-resizer.html">Image Resizer</a>
+          <a href="image-compressor.html">Image Compressor</a>
+          <a href="images-to-pdf.html">Images to PDF</a>
+          <a href="jpg-to-pdf.html">JPG to PDF</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/image-helpers.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/jpg-to-png.js" defer></script>
+</body>
+</html>

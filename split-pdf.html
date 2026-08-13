@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split PDF - Extract a Page Range for Free | DocuTools</title>
+  <meta name="description" content="Split a PDF by choosing a page range and saving it as a new file. Processed locally in your browser.">
+  <link rel="canonical" href="https://www.docutools.example/split-pdf.html">
+  <meta property="og:title" content="Split PDF - Extract a Page Range for Free | DocuTools">
+  <meta property="og:description" content="Split a PDF by choosing a page range and saving it as a new file. Processed locally in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.docutools.example/split-pdf.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-active="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="main-content">
+
+    <section class="tool-page-header">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> &rsaquo; <a href="tools.html">All Tools</a> &rsaquo; Split PDF</p>
+        <h1>Split PDF</h1>
+        <p class="tool-desc">Upload a PDF, choose a page range, and save just those pages as a new PDF.</p>
+        <div class="tool-meta"><span class="badge badge-local">Local processing</span></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tool-app">
+
+          <div class="panel">
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose a PDF file">
+              <div class="dropzone-icon" aria-hidden="true">&#128196;</div>
+              <p><strong>Drag and drop a PDF here</strong> or click to choose a file</p>
+              <p class="dz-hint">One PDF file, up to 80 MB.</p>
+              <input type="file" id="file-input" accept="application/pdf,.pdf">
+            </div>
+            <ul class="file-list" id="file-list" aria-live="polite"></ul>
+            <p id="page-count-line" class="field-help" style="display:none;"></p>
+            
+            <div class="field" id="range-field">
+              <label for="range-input">Pages to keep</label>
+              <input type="text" id="range-input" placeholder="e.g. 1-3,5,8-10">
+              <p class="field-help">Use commas to separate pages, and a dash for ranges.</p>
+            </div>
+            <div class="control-row">
+              <button type="button" class="btn btn-primary" id="convert-btn" disabled>Split PDF</button>
+              <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+            <div class="status-box" id="status-box" role="status"></div>
+          </div>
+          <div class="panel result-panel" id="result-panel" style="display:none;">
+            <h2>Your PDF is ready</h2>
+            <p id="result-summary"></p>
+            <button type="button" class="btn btn-primary btn-block" id="download-btn">Download PDF</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="border-top:1px solid var(--color-border);">
+      <div class="container prose">
+        <h2>How to use this tool</h2>
+        <ol>
+<li>Upload a PDF file. DocuTools will show you how many pages it has.</li>
+<li>Type the page numbers or ranges you want to keep, such as 1-3,5,8-10.</li>
+<li>Click "Split PDF".</li>
+<li>Download the new, smaller PDF.</li>
+        </ol>
+        <h2>Limitations</h2><p>Password-protected PDFs cannot be split until they are unlocked. Very large PDFs may take longer to process because everything happens in your browser.</p>
+        <h2>Privacy</h2>
+        <p>This tool processes your file locally in your browser. Your file is not uploaded to a server as part of this operation.</p>
+        <h2>Frequently asked questions</h2>
+        <details class="faq-item">
+          <summary>Does this remove the pages from my original file?</summary>
+          <p>No. Your original file is untouched; DocuTools creates a brand new PDF containing only the pages you chose.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I select pages out of order?</summary>
+          <p>Selected pages are always kept in their original order in the output PDF. Use the Page Extractor tool if you need more visual control over selection.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my PDF uploaded to a server?</summary>
+          <p>No, splitting happens locally in your browser using the pdf-lib library.</p>
+        </details>
+        <h2>Related tools</h2>
+        <div class="related-tools">
+          <a href="pdf-page-extractor.html">PDF Page Extractor</a>
+          <a href="merge-pdf.html">Merge PDF</a>
+          <a href="compress-pdf.html">Compress PDF</a>
+          <a href="pdf-to-jpg.html">PDF to JPG</a>
+          <a href="pdf-to-text.html">PDF to Text</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/lib-loader.js" defer></script>
+  <script src="js/pdf-helpers.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/split-pdf.js" defer></script>
+</body>
+</html>

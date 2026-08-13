@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Page Extractor - Pick and Save Specific Pages | DocuTools</title>
+  <meta name="description" content="Select individual pages from a PDF with checkboxes and save them as a new file. Processed locally in your browser.">
+  <link rel="canonical" href="https://www.docutools.example/pdf-page-extractor.html">
+  <meta property="og:title" content="PDF Page Extractor - Pick and Save Specific Pages | DocuTools">
+  <meta property="og:description" content="Select individual pages from a PDF with checkboxes and save them as a new file. Processed locally in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.docutools.example/pdf-page-extractor.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-active="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="main-content">
+
+    <section class="tool-page-header">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> &rsaquo; <a href="tools.html">All Tools</a> &rsaquo; PDF Page Extractor</p>
+        <h1>PDF Page Extractor</h1>
+        <p class="tool-desc">Upload a PDF, check exactly the pages you want, and save them as a new PDF.</p>
+        <div class="tool-meta"><span class="badge badge-local">Local processing</span></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tool-app">
+
+          <div class="panel">
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose a PDF file">
+              <div class="dropzone-icon" aria-hidden="true">&#128196;</div>
+              <p><strong>Drag and drop a PDF here</strong> or click to choose a file</p>
+              <p class="dz-hint">One PDF file, up to 80 MB.</p>
+              <input type="file" id="file-input" accept="application/pdf,.pdf">
+            </div>
+            <ul class="file-list" id="file-list" aria-live="polite"></ul>
+            <p id="page-count-line" class="field-help" style="display:none;"></p>
+            
+            <div class="control-row" id="select-controls" style="margin-top:10px;">
+              <button type="button" class="btn btn-secondary btn-sm" id="select-all-btn">Select all</button>
+              <button type="button" class="btn btn-secondary btn-sm" id="select-none-btn">Select none</button>
+            </div>
+            <div class="page-grid" id="page-grid" style="display:none;"></div>
+            <div class="control-row">
+              <button type="button" class="btn btn-primary" id="convert-btn" disabled>Extract Pages</button>
+              <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+            <div class="status-box" id="status-box" role="status"></div>
+          </div>
+          <div class="panel result-panel" id="result-panel" style="display:none;">
+            <h2>Your PDF is ready</h2>
+            <p id="result-summary"></p>
+            <button type="button" class="btn btn-primary btn-block" id="download-btn">Download PDF</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="border-top:1px solid var(--color-border);">
+      <div class="container prose">
+        <h2>How to use this tool</h2>
+        <ol>
+<li>Upload a PDF file.</li>
+<li>Check the boxes for the pages you want to keep, or use "Select all" / "Select none".</li>
+<li>Click "Extract Pages".</li>
+<li>Download the new PDF containing only your chosen pages.</li>
+        </ol>
+        <h2>Limitations</h2><p>For PDFs with a very large number of pages, the checkbox list can get long; the Split PDF tool may be quicker if you just need one continuous range.</p>
+        <h2>Privacy</h2>
+        <p>This tool processes your file locally in your browser. Your file is not uploaded to a server as part of this operation.</p>
+        <h2>Frequently asked questions</h2>
+        <details class="faq-item">
+          <summary>How is this different from Split PDF?</summary>
+          <p>Split PDF uses typed page ranges. Page Extractor lets you tick individual pages visually, which is handy for picking out a scattered set of pages.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I pick pages out of order to rearrange them?</summary>
+          <p>Extracted pages keep their original order in the output PDF.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my PDF uploaded to a server?</summary>
+          <p>No, extraction happens locally in your browser using the pdf-lib library.</p>
+        </details>
+        <h2>Related tools</h2>
+        <div class="related-tools">
+          <a href="split-pdf.html">Split PDF</a>
+          <a href="merge-pdf.html">Merge PDF</a>
+          <a href="compress-pdf.html">Compress PDF</a>
+          <a href="pdf-to-jpg.html">PDF to JPG</a>
+          <a href="pdf-to-text.html">PDF to Text</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/lib-loader.js" defer></script>
+  <script src="js/pdf-helpers.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/pdf-page-extractor.js" defer></script>
+</body>
+</html>

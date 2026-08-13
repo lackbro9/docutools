@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JPG to PDF - Convert JPG Images to PDF Free | DocuTools</title>
+  <meta name="description" content="Convert JPG or JPEG photos into a single PDF file for free. Processed locally in your browser, no upload required.">
+  <link rel="canonical" href="https://www.docutools.example/jpg-to-pdf.html">
+  <meta property="og:title" content="JPG to PDF - Convert JPG Images to PDF Free | DocuTools">
+  <meta property="og:description" content="Convert JPG or JPEG photos into a single PDF file for free. Processed locally in your browser, no upload required.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.docutools.example/jpg-to-pdf.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "JPG to PDF - DocuTools",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (web browser)",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+  </script>
+</head>
+<body data-active="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="main-content">
+
+    <section class="tool-page-header">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> &rsaquo; <a href="tools.html">All Tools</a> &rsaquo; JPG to PDF</p>
+        <h1>JPG to PDF</h1>
+        <p class="tool-desc">Convert one or more JPG photos into a single PDF file, right in your browser.</p>
+        <div class="tool-meta"><span class="badge badge-local">Local processing</span></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tool-app">
+
+          <div class="panel">
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Add image files">
+              <div class="dropzone-icon" aria-hidden="true">&#128193;</div>
+              <p><strong>Drag and drop images here</strong> or click to choose files</p>
+              <p class="dz-hint">Supports JPG and JPEG files, up to 25 MB each, up to 30 files.</p>
+              <input type="file" id="file-input" accept="image/jpeg,.jpg,.jpeg" multiple>
+            </div>
+            <ul class="file-list" id="file-list" aria-live="polite"></ul>
+            <div class="control-row">
+              <button type="button" class="btn btn-primary" id="convert-btn" disabled>Convert to PDF</button>
+              <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+            <div class="status-box" id="status-box" role="status"></div>
+            <div class="progress-bar-track" id="progress-track" style="display:none;">
+              <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+          </div>
+          <div class="panel result-panel" id="result-panel" style="display:none;">
+            <h2>Your PDF is ready</h2>
+            <p id="result-summary"></p>
+            <button type="button" class="btn btn-primary btn-block" id="download-btn">Download PDF</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="border-top:1px solid var(--color-border);">
+      <div class="container prose">
+        <h2>How to use this tool</h2>
+        <ol>
+<li>Click the drop zone or drag JPG files onto it to add them.</li>
+<li>Reorder images using the up and down arrows, or remove any you do not want.</li>
+<li>Click "Convert to PDF" to build the file.</li>
+<li>Click "Download PDF" to save the result to your device.</li>
+        </ol>
+        <h2>Limitations</h2><p>Very large images or a large number of files can be slow to process on low-powered devices because everything happens in your browser's memory. Extremely large images are automatically scaled down to keep the PDF a reasonable size.</p>
+        <h2>Privacy</h2>
+        <p>This tool processes your file locally in your browser. Your file is not uploaded to a server as part of this operation.</p>
+        <h2>Frequently asked questions</h2>
+        <details class="faq-item">
+          <summary>Will this reduce my image quality?</summary>
+          <p>Images larger than roughly 1600 by 2000 pixels are scaled down to keep the PDF a manageable size; smaller images are placed at their original resolution.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I add PNG files too?</summary>
+          <p>This tool only accepts JPG/JPEG files. Use the Images to PDF tool if you need to mix JPG and PNG files.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my photo uploaded anywhere?</summary>
+          <p>No. The PDF is built locally in your browser using the pdf-lib library.</p>
+        </details>
+        <h2>Related tools</h2>
+        <div class="related-tools">
+          <a href="images-to-pdf.html">Images to PDF</a>
+          <a href="pdf-to-jpg.html">PDF to JPG</a>
+          <a href="merge-pdf.html">Merge PDF</a>
+          <a href="image-compressor.html">Image Compressor</a>
+          <a href="image-resizer.html">Image Resizer</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/lib-loader.js" defer></script>
+  <script src="js/pdf-helpers.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/jpg-to-pdf.js" defer></script>
+</body>
+</html>
